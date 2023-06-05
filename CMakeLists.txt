@@ -3,4 +3,4 @@ project(guia1_ej17 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(guia1_ej17 main.c)
+add_executable(guia1_ej17 main.c Enteros.c Enteros.h)
