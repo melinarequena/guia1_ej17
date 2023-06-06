@@ -24,6 +24,8 @@ void enlistar(Lista * lista, Numero * numAInsertar);
 
 int buscar(Lista * lista, int numBuscado);
 
+void printear(Lista * lista);
+
 
 
 

@@ -41,18 +41,17 @@ void enlistar(Lista * lista, Numero * numAInsertar){
         //Lista vacia
         lista->cabecera = numAInsertar;
     }else{
-        while (lista->cabecera->sig != NULL){
-            lista->cabecera = lista->cabecera->sig;
+        Numero * auxLista = lista->cabecera;
+        while (auxLista->sig != NULL){
+            auxLista = auxLista->sig;
         }
-        lista->cabecera->sig = numAInsertar;
+        auxLista->sig = numAInsertar;
     }
 }
 
 int buscar(Lista *lista, int numBuscado) {
-    int cont=0;
-    while(lista->cabecera != NULL || lista->cabecera->num == numBuscado){
+    while(lista->cabecera->sig != NULL || lista->cabecera->num == numBuscado){
         lista->cabecera = lista->cabecera->sig;
-        cont ++;
     }
     if(lista->cabecera == NULL){
         return 0;
@@ -60,5 +59,13 @@ int buscar(Lista *lista, int numBuscado) {
         if(lista->cabecera->num == numBuscado){
             return 1;
         }
+}
+
+void printear(Lista *lista) {
+    printf("Lista: \n");
+    while(lista->cabecera != NULL){
+        printf("%d\n", lista->cabecera->num);
+        lista->cabecera = lista->cabecera->sig;
+    }
 }
 

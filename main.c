@@ -14,6 +14,8 @@ int main() {
     enlistar(lista, newNumero(10));
     enlistar(lista, newNumero(3));
 
+    printear(lista);
+
     printf("Ingrese el numero que desea buscar\n");
     scanf("%d", &num);
 
